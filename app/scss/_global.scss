@@ -1,0 +1,28 @@
+// FOOTER WILL BE AT THE BOTTOM NO MATTER HOW MUCH CONTENT THERE IS IN MAIN
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+// 
+
+.container-lg {
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-md {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
