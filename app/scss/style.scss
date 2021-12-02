@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -75,7 +76,7 @@
         background-color: #fcd7b6;
         // width: 178px;
         border-radius: 25px;
-        padding: 10px 40px 10px;
+        padding: 10px 40px;
         margin: 0 20px 0;
     }
 
@@ -88,7 +89,7 @@
 
     &__group-link--bar {
         display: inline-block;
-        margin: 0 30px 0;
+        margin: 0 25px 0;
     }
 
     &__group-count {
@@ -245,7 +246,141 @@
 
 
 
+// ================== TOP SLIDER ==================
+.top-slider {
 
+    &__wrapper {
+        background-color: #fcd7b6;
+    }
+
+    &__inner {
+        position: relative;
+        // padding: 105px 0 80px;
+        margin: 100px 0 66px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+            top: -30px;
+            right: 100px;
+            width: 634px;
+            height: 634px;
+            z-index: -1;
+        }
+    }
+
+
+    &__item {
+        display: flex !important;
+        justify-content: space-evenly;
+        max-width: 1330px;
+        padding: 120px 30px 200px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        margin-right: 30px;
+    }
+
+    &__title {
+        @extend %r500;
+        max-width: 470px;
+        text-transform: uppercase;
+        font-size: 72px;
+        line-height: 70px;
+        color: #243f4d;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        @extend %r400;
+        max-width: 370px;
+        font-size: 18px;
+        color: #436372;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        display: inline-block;
+        max-width: 200px;
+        width: 100%;
+        @extend %r500;
+        text-transform: capitalize;
+        font-size: 15px;
+        color: #fff;
+        line-height: 1;
+        background-color: #a3bbc8;
+        padding: 24px 100px 20px 25px;
+
+        // ADDING THE RIGHT ARROW
+        background-image: url('../images/icons/arrowRight.svg');
+        background-position: center right 18px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__img {
+        align-self: flex-end;
+    }
+
+
+    .slick-dots {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+
+        li+li {
+            margin-left: 12px;
+        }
+
+        li {
+
+            button {
+                border: none;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 0.3;
+                @extend %r500;
+                font-size: 15px;
+                color: #243f4d;
+                line-height: 1;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+
+            &.slick-active {
+                button {
+                    opacity: 1;
+                }
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 @import 'media';
