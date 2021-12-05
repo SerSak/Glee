@@ -362,25 +362,97 @@
             }
 
         }
-
-
     }
 
 
+    .info {
+        background-color: #fef7f0;
+        padding: 45px 0;
 
+        &__container {
+            max-width: 1630px;
+            padding: 0 30px;
+            margin: 0 auto;
+        }
 
+        &__items {
+            display: flex;
+            justify-content: space-between;
 
+        }
 
+        &__item + .info__item {
+            margin-left: 30px;
+        }
 
+        &__item {
+            position: relative;
+            max-width: 370px;
+            padding-left: 100px;
 
+            &--support::before,
+            &--delivery::before,
+            &--payment::before {
+                position: absolute;
+                content: '';
+                top: 13px;
+                left: 24px;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
 
+            &--support::before {
+                background-image: url("../images/icons/support.svg");
+                width: 52px;
+                height: 54px;
 
+            }
 
+            &--delivery::before {
+                background-image: url("../images/icons/delivery.svg");
+                width: 55px;
+                height: 57px;
+                top: 0;
+            }
 
+            &--payment::before {
+                background-image: url("../images/icons/payment.svg");
+                width: 54px;
+                height: 53px;
+            }
+        }
 
+        &__title {
+            @extend %dm500;
+            font-size: 18px;
+            color: #414141;
+            line-height: 40px;
+        }
 
-
+        &__text {
+            @extend %dm400;
+            font-size: 16px;
+            color: #585858;
+            line-height: 30px;
+            max-width: 220px
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import 'media';
