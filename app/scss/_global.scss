@@ -26,3 +26,11 @@ body {
     padding: 0 30px;
     margin: 0 auto;
 }
+
+.title {
+    @extend %dm700;
+    font-size: 36px;
+    color: #191919;
+    text-align: center;
+    line-height: 1;
+}
