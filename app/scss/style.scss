@@ -555,6 +555,7 @@
 }
 
 
+
 // ================== LAMP ==================
 
 .lamp {
@@ -622,12 +623,80 @@
         border: 1px solid #436372;
         border-radius: 5px;
     }
-
-
-
-
-
 }
+
+
+
+// ================== DESIGN ==================
+.design {
+    padding-bottom: 110px;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 35px 30px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item-box {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+    }
+
+    &__item-title {
+        @extend %dm700;
+        font-size: 20px;
+        color: #1a1a1a;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        max-width: 170px;
+    }
+
+    &__item-subtitle {
+        @extend %dm700;
+        font-size: 16px;
+        color: #a3bbc8;
+        line-height: 1.2;
+    }
+
+    &__item {
+        background-color: #f8f8f8;
+        border-radius: 5px;
+    }
+}
+
+
+
+// ================== VIDEO ==================
+
+.video {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+// ================== BLOG ==================
+
+
+
+
+
+
+
+
+
+
 
 
 
